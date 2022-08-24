@@ -31,3 +31,5 @@ jobs:
         pip install pytest
         export PYTHONPATH=src
         pytest
+    - name: Generate deployment package
+      run: zip -r deploy.zip . -x '*.git*'    
